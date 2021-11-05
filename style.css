@@ -18,7 +18,7 @@ header {
   position: relative;
 }
 
-main .place {
+.place {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,24 +27,20 @@ main .place {
   padding: 0.5rem;
   background-color: #f3f3f3;
 }
-
-main .place i {
+.place i {
   font-size: 1.5rem;
 }
 
 .search {
   text-align: center;
 }
-
 .search h2 {
   margin-top: 2rem;
   font-size: 2rem;
 }
-
 .search p {
   font-size: 1.5rem;
 }
-
 .search button {
   cursor: pointer;
   color: white;
@@ -57,7 +53,6 @@ main .place i {
   background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
   transition: transform 190ms;
 }
-
 .search button:hover {
   transform: scale(1.02);
   opacity: 0.9;
