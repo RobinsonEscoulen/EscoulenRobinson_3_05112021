@@ -33,3 +33,34 @@ main .place {
 main .place i {
     font-size: 1.5rem;
 }
+
+.search {
+    text-align: center;
+}
+
+.search h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.search p {
+    font-size: 1rem;
+}
+
+.search button {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.8);
+    background-image: linear-gradient(to top,rgba(145, 85, 220, 0.9), rgba(255,120, 218, 0.9 ));
+    transition: transform 190ms;
+}
+
+.search button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
