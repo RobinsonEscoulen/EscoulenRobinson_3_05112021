@@ -1,0 +1,22 @@
+{
+  "name": "p3_robinson_escoulen_code",
+  "version": "1.0.0",
+  "description": "Porjet 3 OC OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinsonEscoulen/OpenClassroomP3.git"
+  },
+  "author": "Robinson Escoulen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinsonEscoulen/OpenClassroomP3/issues"
+  },
+  "homepage": "https://github.com/RobinsonEscoulen/OpenClassroomP3#readme",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}
