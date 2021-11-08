@@ -1,7 +1,11 @@
+@import "../utils/box-shadows.scss";
+
 .search {
     text-align: center;
+    background-color: #f2f2f2;
+    padding: 2rem;
 & h2 {
-    margin-top: 2rem;
+    margin: auto;
     font-size: 2rem;
 }
 & p {
@@ -15,12 +19,13 @@
     margin-top: 1rem;
     border: none;
     border-radius: 2rem;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.8);
     background-image: linear-gradient(to top,rgba(145, 85, 220, 0.9), rgba(255,120, 218, 0.9 ));
     transition: transform 190ms;
+    @include shadow;
 }
 & button:hover {
     transform: scale(1.02);
     opacity: 0.9;
 }
 }
+

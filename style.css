@@ -25,7 +25,7 @@ header {
   gap: 1rem;
   text-align: center;
   padding: 0.5rem;
-  background-color: #f3f3f3;
+  background-color: #eaeaea;
 }
 .place i {
   font-size: 1.5rem;
@@ -33,9 +33,11 @@ header {
 
 .search {
   text-align: center;
+  background-color: #f2f2f2;
+  padding: 2rem;
 }
 .search h2 {
-  margin-top: 2rem;
+  margin: auto;
   font-size: 2rem;
 }
 .search p {
@@ -49,13 +51,62 @@ header {
   margin-top: 1rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
   background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
   transition: transform 190ms;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
 }
 .search button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.operation {
+  counter-reset: list;
+  padding: 2rem;
+}
+.operation ol {
+  display: flex;
+  padding-left: initial;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .operation ol {
+    flex-direction: column;
+  }
+}
+.operation li {
+  position: relative;
+  list-style-type: none;
+  padding: 1.5rem 2rem;
+  background-color: #f6f6f6;
+  flex: 1;
+  border-radius: 1rem;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
+}
+.operation li::before {
+  content: counter(list);
+  counter-increment: list;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.operation li:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+  cursor: pointer;
+}
+.operation li i {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

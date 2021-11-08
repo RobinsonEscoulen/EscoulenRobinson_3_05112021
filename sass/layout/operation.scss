@@ -1,0 +1,50 @@
+@import "../utils/hover.scss";
+@import "../utils/box-shadows.scss";
+@import "../utils/variables.scss";
+@import "../utils/colors.scss";
+
+.operation {
+    counter-reset: list;
+    padding: 2rem;
+    & ol {
+        display: flex;
+        padding-left: initial;
+        gap: 2rem;
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        position: relative;
+        &::before {
+            content: counter(list);
+            counter-increment: list;
+            color: white;
+            background-color: $purple;
+            width: 2 * $base-dim;
+            height: 2 * $base-dim;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: $base-dim;
+            left: -$base-dim;
+        }
+        list-style-type: none;
+        padding: 1.5rem 2rem;
+        background-color: #f6f6f6;
+        flex: 1;
+        border-radius: 1rem;
+        @include shadow;
+        &:hover {
+            @include hover;
+            cursor: pointer;
+        }
+        & i {
+            margin-right: 1rem;
+            color: $lightgrey;
+            font-size: 1.5rem;
+        }
+    }
+}
