@@ -28,8 +28,9 @@
             justify-content: center;
             border-radius: 50%;
             position: absolute;
-            bottom: $base-dim;
+            top: 50%;
             left: -$base-dim;
+            transform: translateY(-50%);
         }
         list-style-type: none;
         padding: 1.5rem 2rem;

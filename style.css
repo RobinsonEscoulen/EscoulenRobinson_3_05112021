@@ -95,8 +95,9 @@ header {
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  top: 50%;
   left: -1rem;
+  transform: translateY(-50%);
 }
 .operation li:hover {
   transform: scale(1.02);
@@ -107,6 +108,30 @@ header {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+.menus h2 {
+  margin-bottom: 2rem;
+}
+.menus .menus__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .card__img {
+  background-image: url("../../assets/menu-1.jpg");
+  background-size: cover;
+  height: 15rem;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
