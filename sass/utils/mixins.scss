@@ -9,4 +9,8 @@
 @mixin hover {
     transform: scale(1.02);
     opacity: 0.9;
+    background-color: #f5edff;
+    & i {
+        color: $purple;
+    }
 }
