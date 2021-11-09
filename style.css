@@ -60,8 +60,8 @@ header {
   margin-top: 1rem;
   border: none;
   border-radius: 2rem;
-  background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
   transition: transform 190ms;
+  background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
 }
 .search button:hover {
@@ -176,6 +176,17 @@ header {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .card__description .fas {
+  color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transition: all 200ms;
+  background-image: linear-gradient(to top, #9155dc, #ff78da);
+}
+.menus .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 
 footer {

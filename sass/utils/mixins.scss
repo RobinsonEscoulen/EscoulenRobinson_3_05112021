@@ -1,0 +1,12 @@
+@mixin gradient($opacity: 0.9) {
+    background-image: linear-gradient(to top,rgba(145, 85, 220, $opacity), rgba(255,120, 218, $opacity));
+}
+
+@mixin shadow {
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.8);
+}
+
+@mixin hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}

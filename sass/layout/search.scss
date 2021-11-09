@@ -1,4 +1,5 @@
-@import "../utils/box-shadows.scss";
+@import "../utils/mixins.scss";
+
 
 .search {
     text-align: center;
@@ -19,8 +20,8 @@
     margin-top: 1rem;
     border: none;
     border-radius: 2rem;
-    background-image: linear-gradient(to top,rgba(145, 85, 220, 0.9), rgba(255,120, 218, 0.9 ));
     transition: transform 190ms;
+    @include gradient(0.9);
     @include shadow;
 }
 & button:hover {
