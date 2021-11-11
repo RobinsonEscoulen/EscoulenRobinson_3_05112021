@@ -63,7 +63,7 @@ header {
   border-radius: 2rem;
   transition: transform 190ms;
   background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
 }
 .search button:hover {
   transform: scale(1.02);
@@ -92,7 +92,7 @@ header {
   flex: 1;
   border-radius: 1rem;
   font-weight: bold;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
 }
 .operation li::before {
   content: counter(list);
@@ -236,6 +236,14 @@ footer p {
   padding: 0.2rem;
 }
 
+@keyframes quarter-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .photo img {
   display: block;
   width: 100%;
@@ -320,15 +328,24 @@ main {
   }
 }
 .food .food__menu {
-  border: 1px solid black;
-  background-color: white;
-  border-radius: 1rem;
+  overflow: hidden;
 }
 .food .food__menu .food__item {
   display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: white;
+  margin: 0.5rem;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
 }
 .food .food__menu .food__item__desc {
   padding: 1rem;
+  overflow: hidden;
+}
+.food .food__menu .food__item__desc h4, .food .food__menu .food__item__desc p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .food .food__menu .food__item .food__price {
   margin-left: auto;
@@ -338,7 +355,29 @@ main {
   align-items: flex-end;
 }
 .food .food__menu .food__item--check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 0 1rem 1rem 0;
   background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+.food .food__menu .food__item--check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 1rem;
+  color: #99e2d0;
+}
+.food .food__menu .food__item:hover .food__item--check {
+  margin-right: 0;
+}
+.food .food__menu .food__item:hover i {
+  animation: quarter-spin 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
