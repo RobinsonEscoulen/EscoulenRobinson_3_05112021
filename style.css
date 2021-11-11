@@ -63,7 +63,7 @@ header {
   border-radius: 2rem;
   transition: transform 190ms;
   background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
-  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 .search button:hover {
   transform: scale(1.02);
@@ -92,7 +92,7 @@ header {
   flex: 1;
   border-radius: 1rem;
   font-weight: bold;
-  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 .operation li::before {
   content: counter(list);
@@ -176,9 +176,9 @@ header {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 free";
   font-weight: 400;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -195,9 +195,9 @@ header {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 free";
   font-weight: 900;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -229,7 +229,7 @@ footer {
   background-color: #353535;
 }
 footer h2 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Shrikhand", "sans-serif";
   font-weight: 500;
 }
 footer p {
@@ -244,26 +244,43 @@ footer p {
     transform: rotate(0);
   }
 }
-.photo img {
+.page__restau header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  position: absolute;
+  content: "\f060";
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+.page__restau .photo img {
   display: block;
   width: 100%;
-  max-height: 100%;
+  height: 70vh;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
 }
-
-main {
+@media (max-width: 1000px) {
+  .page__restau .photo img {
+    height: auto;
+  }
+}
+.page__restau main {
   background-color: #f6f6f6;
 }
-
-.restau__main {
+.page__restau .restau__main {
   padding: 0 1rem;
 }
-
-.restau__title {
+.page__restau .restau__title {
   margin-top: -3rem;
 }
-.restau__title h2 {
+.page__restau .restau__title h2 {
   font-family: "shrikhand", "cursive";
   padding: 2rem 1rem;
   position: relative;
@@ -272,7 +289,7 @@ main {
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
 }
-.restau__title h2::before {
+.page__restau .restau__title h2::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -280,9 +297,9 @@ main {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 free";
   font-weight: 400;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -291,7 +308,7 @@ main {
   opacity: 1;
   transition: all 200ms;
 }
-.restau__title h2::after {
+.page__restau .restau__title h2::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -299,9 +316,9 @@ main {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 free";
   font-weight: 900;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
@@ -311,50 +328,63 @@ main {
   transition: all 200ms;
   background-image: linear-gradient(to top, #9155dc, #ff78da);
 }
-.restau__title h2:hover::after {
+.page__restau .restau__title h2:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.15);
 }
-
-.food {
+.page__restau .food {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background-color: #f6f6f6;
 }
 @media (max-width: 1000px) {
-  .food {
+  .page__restau .food {
     grid-template-columns: 1fr;
   }
 }
-.food .food__menu {
+.page__restau .food h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+}
+.page__restau .food h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99e2d0;
+}
+.page__restau .food .food__menu {
   overflow: hidden;
 }
-.food .food__menu .food__item {
+.page__restau .food .food__menu .food__item {
   display: flex;
   overflow: hidden;
   border-radius: 1rem;
   background-color: white;
   margin: 0.5rem;
-  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
-.food .food__menu .food__item__desc {
+.page__restau .food .food__menu .food__item__desc {
   padding: 1rem;
   overflow: hidden;
 }
-.food .food__menu .food__item__desc h4, .food .food__menu .food__item__desc p {
+.page__restau .food .food__menu .food__item__desc h4, .page__restau .food .food__menu .food__item__desc p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.food .food__menu .food__item .food__price {
+.page__restau .food .food__menu .food__item .food__price {
   margin-left: auto;
   font-weight: bold;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
-.food .food__menu .food__item--check {
+.page__restau .food .food__menu .food__item--check {
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -364,7 +394,7 @@ main {
   width: 4rem;
   transition: margin-right 0.5s;
 }
-.food .food__menu .food__item--check i {
+.page__restau .food .food__menu .food__item--check i {
   display: grid;
   place-items: center;
   background: white;
@@ -373,11 +403,35 @@ main {
   border-radius: 1rem;
   color: #99e2d0;
 }
-.food .food__menu .food__item:hover .food__item--check {
+.page__restau .food .food__menu .food__item:hover {
+  cursor: pointer;
+}
+.page__restau .food .food__menu .food__item:hover .food__item--check {
   margin-right: 0;
 }
-.food .food__menu .food__item:hover i {
+.page__restau .food .food__menu .food__item:hover i {
   animation: quarter-spin 0.5s ease-in-out;
+}
+.page__restau section.order {
+  height: 15vh;
+  display: grid;
+  place-items: center;
+}
+.page__restau section.order button {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 190ms;
+  background-image: linear-gradient(to top, rgba(145, 85, 220, 0.9), rgba(255, 120, 218, 0.9));
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+.page__restau section.order button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
