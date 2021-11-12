@@ -39,7 +39,7 @@
         font-weight: bold;
         @include shadow;
         &:hover {
-            @include hover;
+            @include op-hover;
             cursor: pointer;
         }
         & i {

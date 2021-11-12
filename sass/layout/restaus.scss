@@ -35,10 +35,12 @@
     }
 
     .card {
+        @include shadow;
+        border-radius: 1rem 1rem 0 0;
         &__img {
             width: 100%;
             height: 16rem;
-            border-radius: 1rem 1rem 0 0;
+            border-radius: inherit;
             object-fit: cover;
         }
         &__description {

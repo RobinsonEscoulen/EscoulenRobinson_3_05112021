@@ -8,13 +8,17 @@
     box-shadow: 2px 1px 8px -3px $lightgrey;
 }
 
-@mixin hover {
+@mixin op-hover {
     transform: scale(1.02);
     opacity: 0.9;
     background-color: #f5edff;
     & i {
         color: $purple;
     }
+}
+
+@mixin arrow-hover($scaling: 1.02 ,$transformation: none) {
+    transform:  $transformation scale($scaling);
 }
 
 @mixin font-awesome($font-weight: 400) {
