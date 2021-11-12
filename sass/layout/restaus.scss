@@ -3,7 +3,7 @@
 @import "../utils/mixins.scss";
 
 .menus {
-    background-color: #f6f6f6;
+    background-color: $whitelight;
     padding: 2rem;
     h2 {
         margin-bottom: 2rem;
@@ -48,6 +48,7 @@
             h3, p {
                 padding: 0.5rem;
                 padding-left: 1rem;
+                padding-bottom: inherit;
             }
             p {
                 padding-bottom: 1rem;

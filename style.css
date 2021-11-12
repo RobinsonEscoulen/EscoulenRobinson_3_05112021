@@ -24,7 +24,7 @@ header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  padding: 0.3rem;
+  padding: 1rem;
   position: relative;
 }
 
@@ -34,13 +34,106 @@ header {
   justify-content: center;
   gap: 1rem;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: #eaeaea;
 }
 .place i {
   font-size: 1.5rem;
 }
 
+@keyframes quarter-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes opening {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ghost {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+    border-right: 9px solid rgba(0, 0, 0, 0.6);
+  }
+  5% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  10% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  15% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  20% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  25% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  30% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  35% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  40% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  45% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  55% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  60% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  65% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  70% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  75% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  80% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  85% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  90% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  95% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-right: 9px solid rgba(0, 0, 0, 0.6);
+  }
+}
 .search {
   text-align: center;
   background-color: #f2f2f2;
@@ -49,9 +142,11 @@ header {
 .search h2 {
   margin: auto;
   font-size: 2rem;
+  padding: 0.5rem;
 }
 .search p {
   font-size: 1.5rem;
+  padding: 0.5rem;
 }
 .search button {
   cursor: pointer;
@@ -68,6 +163,107 @@ header {
 .search button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.loader {
+  position: fixed;
+  background-color: #99e2d0;
+  inset: 0;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.8;
+  animation: ghost 3s forwards;
+  transform-origin: top;
+}
+.loader div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+  font-size: 20px;
+  font-family: arial;
+  width: 300px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
+}
+.loader div div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 250px;
+  font-size: 20px;
+  font-family: arial;
+  width: 250px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
+}
+.loader div div div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 200px;
+  font-size: 20px;
+  font-family: arial;
+  width: 200px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
+}
+.loader div div div div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+  font-size: 20px;
+  font-family: arial;
+  width: 150px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
+}
+.loader div div div div div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  font-size: 20px;
+  font-family: arial;
+  width: 100px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
+}
+.loader div div div div div div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  font-size: 20px;
+  font-family: arial;
+  width: 50px;
+  margin: auto auto;
+  border-radius: 50%;
+  border-right: 9px solid rgba(0, 0, 0, 0.8);
+  animation: spinning 10s linear infinite;
 }
 
 .operation {
@@ -126,7 +322,7 @@ header {
 }
 
 .menus {
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
   padding: 2rem;
 }
 .menus h2 {
@@ -218,6 +414,7 @@ header {
 .menus .card__description h3, .menus .card__description p {
   padding: 0.5rem;
   padding-left: 1rem;
+  padding-bottom: inherit;
 }
 .menus .card__description p {
   padding-bottom: 1rem;
@@ -247,6 +444,91 @@ footer p {
   }
   100% {
     transform: rotate(0);
+  }
+}
+@keyframes opening {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes ghost {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+    border-right: 9px solid rgba(0, 0, 0, 0.6);
+  }
+  5% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  10% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  15% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  20% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  25% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  30% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  35% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  40% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  45% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  55% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  60% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  65% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  70% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  75% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  80% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  85% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  90% {
+    border-right-color: rgba(0, 0, 0, 0.6);
+  }
+  95% {
+    border-right-color: rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: rotate(360deg);
+    border-right: 9px solid rgba(0, 0, 0, 0.6);
   }
 }
 .page__restau header::before {
@@ -377,6 +659,17 @@ footer p {
   background-color: white;
   margin: 0.5rem 0.5rem 0.5rem 0;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+  animation: opening 1s;
+  animation-fill-mode: both;
+}
+.page__restau .food .food__menu .food__item:nth-child(2) {
+  animation-delay: 200ms;
+}
+.page__restau .food .food__menu .food__item:nth-child(3) {
+  animation-delay: 300ms;
+}
+.page__restau .food .food__menu .food__item:nth-child(4) {
+  animation-delay: 400ms;
 }
 .page__restau .food .food__menu .food__item__desc {
   padding: 1rem;

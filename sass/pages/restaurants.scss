@@ -85,6 +85,14 @@ main {
             background-color: white;
             margin: 0.5rem 0.5rem 0.5rem 0;
             @include shadow;
+            @for $i from 2 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 100ms * $i;
+    
+                }
+            }
+            animation: opening 1s;
+            animation-fill-mode: both;
             &__desc {
                 padding: 1rem;
                 overflow: hidden;
