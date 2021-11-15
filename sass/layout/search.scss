@@ -24,80 +24,42 @@
 
 .loader {
     position: fixed;
-    background-color: $color-tertiary;
+    background-color: $lightergrey;
     inset: 0;
     height: 100vh;
     z-index: 1;
-    opacity: 0.8;
-    animation: ghost 3s forwards;
-    transform-origin: top;
+    opacity: 0.9;
+    animation: ghost 10ms 3s forwards;
 
     div {
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
+        @include loaderspin;
         height: 300px;
-        font-size: 20px;
-        font-family: arial;
         width: 300px;
-        margin: auto auto;
-        border-radius: 50%;
-        border-right: 9px solid rgba(0,0,0,0.8);
-        animation: spinning 10s linear infinite;
+
         div {
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
+            @include loaderspin;
             height: 250px;
-            font-size: 20px;
-            font-family: arial;
             width: 250px;
-            margin: auto auto;
-            border-radius: 50%;
-            border-right: 9px solid rgba(0,0,0,0.8);
-            animation: spinning 10s linear infinite;
+
             div {
-                position: absolute;
-                top: 0; right: 0; bottom: 0; left: 0;
+                @include loaderspin;
                 height: 200px;
-                font-size: 20px;
-                font-family: arial;
                 width: 200px;
-                margin: auto auto;
-                border-radius: 50%;
-                border-right: 9px solid rgba(0,0,0,0.8);
-                animation: spinning 10s linear infinite;
+
                 div {
-                    position: absolute;
-                    top: 0; right: 0; bottom: 0; left: 0;
+                    @include loaderspin;
                     height: 150px;
-                    font-size: 20px;
-                    font-family: arial;
                     width: 150px;
-                    margin: auto auto;
-                    border-radius: 50%;
-                    border-right: 9px solid rgba(0,0,0,0.8);
-                    animation: spinning 10s linear infinite;
+
                     div {
-                        position: absolute;
-                        top: 0; right: 0; bottom: 0; left: 0;
+                        @include loaderspin;
                         height: 100px;
-                        font-size: 20px;
-                        font-family: arial;
                         width: 100px;
-                        margin: auto auto;
-                        border-radius: 50%;
-                        border-right: 9px solid rgba(0,0,0,0.8);
-                        animation: spinning 10s linear infinite;
+
                         div {
-                            position: absolute;
-                            top: 0; right: 0; bottom: 0; left: 0;
+                            @include loaderspin;
                             height: 50px;
-                            font-size: 20px;
-                            font-family: arial;
                             width: 50px;
-                            margin: auto auto;
-                            border-radius: 50%;
-                            border-right: 9px solid rgba(0,0,0,0.8);
-                            animation: spinning 10s linear infinite;
                         }
                     }
                 }

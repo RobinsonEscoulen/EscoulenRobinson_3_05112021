@@ -19,7 +19,7 @@
             content: counter(list);
             counter-increment: list;
             color: white;
-            background-color: $purple;
+            background-color: $color-primary;
             width: 2 * $base-dim;
             height: 2 * $base-dim;
             display: flex;

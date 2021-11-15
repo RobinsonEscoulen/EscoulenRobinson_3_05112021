@@ -30,29 +30,29 @@
 @keyframes spinning {
     0% {
       transform: rotate(0deg);
-      border-right: 9px solid rgba(0,0,0,0.6);
+      border-right: 9px solid $color-primary;
     }
-    5% {border-right-color: rgba(0,0,0,0.4)}
-    10% {border-right-color: rgba(0,0,0,0.6)}
-    15% {border-right-color: rgba(0,0,0,0.4)}
-    20% {border-right-color: rgba(0,0,0,0.6)}
-    25% {border-right-color: rgba(0,0,0,0.4)}
-    30% {border-right-color: rgba(0,0,0,0.6)}
-    35% {border-right-color: rgba(0,0,0,0.4)}
-    40% {border-right-color: rgba(0,0,0,0.6)}
-    45% {border-right-color: rgba(0,0,0,0.4)}
-    50% {border-right-color: rgba(0,0,0,0.6)}
-    55% {border-right-color: rgba(0,0,0,0.4)}
-    60% {border-right-color: rgba(0,0,0,0.6)}
-    65% {border-right-color: rgba(0,0,0,0.4)}
-    70% {border-right-color: rgba(0,0,0,0.6)}
-    75% {border-right-color: rgba(0,0,0,0.4)}
-    80% {border-right-color: rgba(0,0,0,0.6)}
-    85% {border-right-color: rgba(0,0,0,0.4)}
-    90% {border-right-color: rgba(0,0,0,0.6)}
-    95% {border-right-color: rgba(0,0,0,0.4)}
+    5% {border-right-color: $color-secondary}
+    10% {border-right-color: $color-primary}
+    15% {border-right-color: $color-secondary}
+    20% {border-right-color: $color-primary}
+    25% {border-right-color: $color-secondary}
+    30% {border-right-color: $color-primary}
+    35% {border-right-color: $color-secondary}
+    40% {border-right-color: $color-primary}
+    45% {border-right-color: $color-secondary}
+    50% {border-right-color: $color-primary}
+    55% {border-right-color: $color-secondary}
+    60% {border-right-color: $color-primary}
+    65% {border-right-color: $color-secondary}
+    70% {border-right-color: $color-primary}
+    75% {border-right-color: $color-secondary}
+    80% {border-right-color: $color-primary}
+    85% {border-right-color: $color-secondary}
+    90% {border-right-color: $color-primary}
+    95% {border-right-color: $color-secondary}
     100% {
       transform: rotate(360deg);
-      border-right: 9px solid rgba(0,0,0,0.6);
+      border-right: 9px solid $color-primary;
     }
   }
