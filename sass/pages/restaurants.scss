@@ -38,19 +38,21 @@ main {
 }
 
 .restau__main {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .restau__title {
     margin-top: -3rem;
-    h2 {
-    font-family: 'shrikhand', 'cursive';
-    padding: 2rem 1rem;
     @include heart-transition;
     border-radius: 2rem 2rem 0 0;
     background-color: $lightergrey;
-}    
+    h2 {
+    font-family: 'shrikhand', 'cursive';
+    padding: 2rem 1.5rem;
 }
+}
+
+
 
 .food {
     display: grid;

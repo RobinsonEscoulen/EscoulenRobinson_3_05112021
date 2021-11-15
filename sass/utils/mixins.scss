@@ -76,6 +76,7 @@
     &:hover {
         transform: scale(1.02);
         opacity: 0.9;
+        box-shadow: 5px 6px 6px -4px $darkgrey;
     }
 }
 

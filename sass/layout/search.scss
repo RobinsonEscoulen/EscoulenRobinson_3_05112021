@@ -29,7 +29,7 @@
     height: 100vh;
     z-index: 1;
     opacity: 0.9;
-    animation: ghost 10ms 3s forwards;
+    animation: ghost 10ms 2.5s forwards;
 
     div {
         @include loaderspin;
@@ -65,7 +65,7 @@
                 }
             }
         }
-      }
+    }
 }
 
 

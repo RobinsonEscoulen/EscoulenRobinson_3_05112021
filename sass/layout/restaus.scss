@@ -44,19 +44,27 @@
             object-fit: cover;
         }
         &__description {
-            @include heart-transition;
-            h3, p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            .card__text {
                 padding: 0.5rem;
                 padding-left: 1rem;
                 padding-bottom: inherit;
             }
             p {
-                padding-bottom: 1rem;
+                padding-top: 0.5rem;
+                
             }
-            &:hover .fas {
-                opacity: 1;
-                transform: translateY(-50%) scale(1.1);
+            .like {
+                @include heart-transition;
+                &:hover .fas {
+                    opacity: 1;
+                    transform: translateY(-50%) scale(1.1);
+                }
             }
+
         }
     }
 }
