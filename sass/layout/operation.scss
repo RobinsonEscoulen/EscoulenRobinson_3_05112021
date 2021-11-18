@@ -9,7 +9,7 @@
         display: flex;
         padding-left: initial;
         gap: 2rem;
-        @media (max-width: 1000px) {
+        @media (max-width: $breakpoint) {
             flex-direction: column;
         }
     }
